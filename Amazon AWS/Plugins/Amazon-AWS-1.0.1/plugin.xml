@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.amazon.aws" version="1.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
+	<name>Amazon AWS</name>
+	<author>Telerik Inc.</author>
+	
+	<js-module name="AWS" src="www/aws.js">
+		<clobbers target="AWS" />
+	</js-module>
+
+    <engines>
+    	<!-- Requires > 3.3.* because of the custom Framework tag for iOS [CB-5238] -->
+    	<engine name="cordova" version=">=3.3.0" />
+    </engines>
+
+	<platform name="ios">
+		<config-file parent="/*" target="config.xml">
+			<feature name="AWS">
+				<param name="ios-package" value="CDVAmazon" />
+			</feature>
+		</config-file>
+		    
+		<source-file src="src/ios/CDVAmazon.m" />
+
+		<config-file target="*-Info.plist" parent="AccessKey">
+            <!-- replace with your own key -->
+            <string>AKIAIDUJXUYFHF6G6S7Q</string>
+        </config-file>
+        
+        <config-file target="*-Info.plist" parent="SecretKey">
+            <!-- replace with your own key -->
+            <string>R605uH6CPCdjFILA6nvRd+6IY6oX9ldvGOmBsDt4</string>
+        </config-file>
+	</platform>
+
+	<platform name="android">
+
+		<source-file src="src/android/res/values/amazonaws.xml" target-dir="res/values" />
+
+        <config-file target="res/values/amazonaws.xml" parent="/*">
+            <!-- replace with your own key -->
+            <string name="aws_access_key">AKIAIDUJXUYFHF6G6S7Q</string>
+            <!-- replace with your own key -->
+            <string name="aws_secret_key">R605uH6CPCdjFILA6nvRd+6IY6oX9ldvGOmBsDt4</string>
+        </config-file>
+
+		<config-file target="res/xml/config.xml" parent="/*">
+			<feature name="AWS">
+           		<param name="android-package" value="com.amazon.aws.AmazonPlugin"/>
+         	</feature>
+     	</config-file>
+
+     	<source-file src="src/android/AmazonPlugin.java"  target-dir="src/com/amazon/aws" />
+
+	</platform>	
+
+</plugin>

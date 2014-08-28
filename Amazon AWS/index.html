@@ -30,7 +30,16 @@
         </div>
         <h3>Amazon AWS Plugin Demo</h3>
         <p>
-            The Amazon AWS plugin ...
+            The Amazon AWS plugin wraps the Javascript SDK so you can easily access a host of
+            cloud-based services. This demo showcases only a few of the possibilities.
+        </p>
+        <p>
+            <strong>Important</strong><br/>
+            <span class="smaller">
+                Inside AppBuilder open Plugins, Amazon-AWS, plugin.xml
+                and do as this comment suggests (4 occurances):<br/>
+                &lt;!-- replace with your own key --&gt;
+            </span>
         </p>
         <p>
             Custom plugins don't work in the simulator and the AppBuilder companion app,
@@ -45,20 +54,27 @@
         data-model="app.demoService.viewModel">
 
         <div class="demo">
+            <h3 class="hassubtitle">Amazon DynamoDB</h3>
+            <div class="subtitle">
+                A cloud NoSQL database
+            </div>
+            <button data-role="button" class="button" data-bind="click: listDynamoDBTables">List all tables (1 actually)</button>
+            <button data-role="button" class="button" data-bind="click: updateDynamoDBRecord">Update table record</button>
+            <button data-role="button" class="button" data-bind="click: readDynamoDBRecord">Read table record</button>
+
             <h3 class="hassubtitle">Amazon S3</h3>
             <div class="subtitle">
                 Online File storage
             </div>
             <button data-role="button" class="button" data-bind="click: listS3Bucket">List S3 Bucket</button>
-            <button data-role="button" class="button" data-bind="click: trackButtonClickedWithPayload">Track "Button" with payload</button>
 
-            <h3 class="hassubtitle">Amazon DynamoDB</h3>
+            <h3 class="hassubtitle">Amazon SQS</h3>
             <div class="subtitle">
-                NoSQL database
+                A message queue in the cloud
             </div>
+            <button data-role="button" class="button" data-bind="click: addToSQSQueue">Add message to SQS queue</button>
+            <button data-role="button" class="button" data-bind="click: readFromSQSQueue">Read message from SQS queue</button>
 
-            <div id="status"></div>
-            <ul id="objects"></ul>
         </div>
     </div>
 
