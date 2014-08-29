@@ -23,12 +23,12 @@
 
 		<config-file target="*-Info.plist" parent="AccessKey">
             <!-- replace with your own key -->
-            <string>AKIAIDUJXUYFHF6G6S7Q</string>
+            <string>abc</string>
         </config-file>
         
         <config-file target="*-Info.plist" parent="SecretKey">
             <!-- replace with your own key -->
-            <string>R605uH6CPCdjFILA6nvRd+6IY6oX9ldvGOmBsDt4</string>
+            <string>xyz</string>
         </config-file>
 	</platform>
 
@@ -38,9 +38,9 @@
 
         <config-file target="res/values/amazonaws.xml" parent="/*">
             <!-- replace with your own key -->
-            <string name="aws_access_key">AKIAIDUJXUYFHF6G6S7Q</string>
+            <string name="aws_access_key">abc</string>
             <!-- replace with your own key -->
-            <string name="aws_secret_key">R605uH6CPCdjFILA6nvRd+6IY6oX9ldvGOmBsDt4</string>
+            <string name="aws_secret_key">xyz</string>
         </config-file>
 
 		<config-file target="res/xml/config.xml" parent="/*">
