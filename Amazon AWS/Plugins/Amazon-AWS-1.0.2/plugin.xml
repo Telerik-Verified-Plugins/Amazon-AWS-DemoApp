@@ -7,6 +7,9 @@
 		<clobbers target="AWS" />
 	</js-module>
 
+    <preference name="ACCESS_KEY" />
+    <preference name="SECRET_KEY" />
+  
 	<platform name="ios">
 		<config-file parent="/*" target="config.xml">
 			<feature name="AWS">
@@ -17,13 +20,11 @@
 		<source-file src="src/ios/CDVAmazon.m" />
 
 		<config-file target="*-Info.plist" parent="AccessKey">
-            <!-- replace with your own key -->
-            <string>abc</string>
+            <string>$ACCESS_KEY</string>
         </config-file>
         
         <config-file target="*-Info.plist" parent="SecretKey">
-            <!-- replace with your own key -->
-            <string>xyz</string>
+            <string>$SECRET_KEY</string>
         </config-file>
 	</platform>
 
@@ -32,11 +33,8 @@
 		<source-file src="src/android/res/values/amazonaws.xml" target-dir="res/values" />
 
         <config-file target="res/values/amazonaws.xml" parent="/*">
-            <!-- replace with your own key -->
-            <string name="aws_access_key">abc</string>
-            
-            <!-- replace with your own key -->
-            <string name="aws_secret_key">xyz</string>
+            <string name="aws_access_key">$ACCESS_KEY</string>
+            <string name="aws_secret_key">$SECRET_KEY</string>
         </config-file>
 
 		<config-file target="res/xml/config.xml" parent="/*">
