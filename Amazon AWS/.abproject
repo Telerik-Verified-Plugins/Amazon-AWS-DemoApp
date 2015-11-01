@@ -3,11 +3,11 @@
   "ProjectGuid": "dc5d2fdf-2d5e-40e4-885e-5edb885d380d",
   "projectVersion": 1,
   "AppIdentifier": "com.telerik.plugindemo.amazonaws",
-  "DisplayName": "Amazon AWS plugin demo",
+  "DisplayName": "Amazon AWS",
   "Author": "Telerik",
   "Description": "Amazon AWS",
-  "BundleVersion": "1.0",
-  "AndroidVersionCode": "1",
+  "BundleVersion": "1.0.2",
+  "AndroidVersionCode": "3",
   "iOSDeviceFamily": [
     "1",
     "2"
@@ -27,12 +27,12 @@
   "FrameworkVersion": "4.0.0",
   "CorePlugins": [
     "cordova-plugin-console",
-    "cordova-plugin-crosswalk-webview@1.2.0",
     "cordova-plugin-device",
     "cordova-plugin-dialogs",
     "cordova-plugin-network-information",
     "cordova-plugin-splashscreen",
-    "cordova-plugin-statusbar"
+    "cordova-plugin-statusbar",
+    "cordova-plugin-whitelist"
   ],
   "AndroidPermissions": [
     "android.permission.READ_PHONE_STATE",
@@ -45,7 +45,7 @@
     "Portrait",
     "Landscape"
   ],
-  "AndroidHardwareAcceleration": "true",
+  "AndroidHardwareAcceleration": "True",
   "iOSStatusBarStyle": "Default",
   "WP8SupportedResolutions": [
     "ID_RESOLUTION_WVGA",
@@ -57,8 +57,8 @@
   "WP8PackageIdentityName": "1234Telerik.com.telerik.plugindemo.amazonaws",
   "CordovaPluginVariables": {
     "com.amazon.aws": {
-      "ACCESS_KEY": "123",
-      "SECRET_KEY": "456"
+      "ACCESS_KEY": "abc",
+      "SECRET_KEY": "123"
     }
   }
 }

@@ -1,6 +1,7 @@
 // replace this by your own
 var AMAZON_AWS_REGION = "us-west-2";
 
+
 (function (global) {
   var DemoViewModel,
       app = global.app = global.app || {};
